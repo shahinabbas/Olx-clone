@@ -23,7 +23,7 @@ const Create = () => {
           price,
           url,
           userId: user.uid,
-          createdAt: date.toString(),
+          createdAt: date.toDateString(),
         })
         history.push('/')
       })

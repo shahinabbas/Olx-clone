@@ -71,11 +71,7 @@
 .card .content .name {
   font-size: small;
 }
-.card .date {
-  display: flex;
-  justify-content: flex-end;
-  font-size: small;
-}
+
 
 .recommendations {
   margin: 16px 16px 24px;

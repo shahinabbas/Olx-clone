@@ -12,8 +12,8 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 function Header() {
   const { user } = useContext(AuthContext)
   const { firebase } = useContext(FirebaseContext)
-  const history=useHistory();
-  const handleLogin=()=>{
+  const history = useHistory();
+  const handleLogin = () => {
     history.push('/login')
   }
   return (
@@ -53,7 +53,7 @@ function Header() {
         <div className="sellMenu">
           <SellButton></SellButton>
           <div className="sellMenuContent">
-            <SellButtonPlus></SellButtonPlus>
+            <SellButtonPlus/>
             <span>SELL</span>
           </div>
         </div>
