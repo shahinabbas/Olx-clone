@@ -11,5 +11,6 @@ ReactDOM.render(
         <Context>
             <App />
         </Context>
+        
     </FirebaseContext.Provider>
     , document.getElementById('root'));

@@ -8,6 +8,7 @@ const Create = () => {
   const [category, setCategory] = useState('')
   const [price, setPrice] = useState('')
   const [image, setImage] = useState(null)
+  const [phone,setPhone]=useState('')
   const { firebase } = useContext(FirebaseContext)
   const { user } = useContext(AuthContext)
   const date = new Date()
@@ -21,6 +22,7 @@ const Create = () => {
           name,
           category,
           price,
+          phone,
           url,
           userId: user.uid,
           createdAt: date.toDateString(),
@@ -56,6 +58,17 @@ const Create = () => {
             name="category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
+          />
+          <br />
+          <label htmlFor="fname">Phone Number</label>
+          <br />
+          <input
+            className="input"
+            type="number"
+            id="fname"
+            name="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
           />
           <br />
           <label htmlFor="fname">Price</label>
