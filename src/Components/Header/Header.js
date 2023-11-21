@@ -44,6 +44,7 @@ function Header() {
         </div>
         <div className="loginPage">
           <a onClick={handleLogin}>{user ? `Hi ${user.displayName}` : 'Login'}</a>
+          {console.log(user)}
           <hr />
         </div>
         {user && <span onClick={() => {

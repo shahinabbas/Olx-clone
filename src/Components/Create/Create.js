@@ -8,11 +8,11 @@ const Create = () => {
   const [category, setCategory] = useState('')
   const [price, setPrice] = useState('')
   const [image, setImage] = useState(null)
-  const [phone,setPhone]=useState('')
+  const [phone, setPhone] = useState('')
   const { firebase } = useContext(FirebaseContext)
   const { user } = useContext(AuthContext)
   const date = new Date()
-  const history=useHistory()
+  const history = useHistory()
   const handleSubmit = () => {
     firebase.storage().ref(`/image/${image.name}`).put(image).then(({ ref }) => {
       ref.getDownloadURL().then((url) => {
@@ -30,7 +30,7 @@ const Create = () => {
         history.push('/')
       })
     })
-    
+
 
   }
   return (
